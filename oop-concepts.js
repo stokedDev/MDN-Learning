@@ -23,5 +23,11 @@ When related classes share the same name for a method but differ in implementati
 When a method of a "super class" has a different implementation in a "subclass" we say that the subclass overrides the version in the superclass.
 
 Encapsulation:
+Unlike procedural programming where functions and variables are created without being contained together,
+OOP classes make it so we can keep related member methods and member variables together in one place.
+Keywords can be used when creating definitions within a class to make such definitions public or private.
+If within a class a definition is made public, it is accessible from outside.
+If within a class a definition is made private, it is not accessible from outside.
+
 
 */
