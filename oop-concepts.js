@@ -29,5 +29,7 @@ Keywords can be used when creating definitions within a class to make such defin
 If within a class a definition is made public, it is accessible from outside.
 If within a class a definition is made private, it is not accessible from outside.
 
-
+OOP and JavaScript:
+Constructors and the prototype chain allow for similiar control as "classical" OOP.
+JS is capable of being used as classbased OOP which is discussed in the next MDN article.
 */
