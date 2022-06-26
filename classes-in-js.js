@@ -1,3 +1,5 @@
+// this file is to follow along with https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+
 /* Classes and Constructors */
 
 class Character {
@@ -27,13 +29,12 @@ const pizza = new Food()
 pizza.beingEaten() // returns "This food is being eaten." as this.self is currently undefined and falsy while 'food' is truthy
 pizza.self = 'pepperoni pizza'
 console.log(pizza)
-pizza.beingEaten()//? 
-// returns "This pepperoni pizza is being eaten." 
+pizza.beingEaten() // returns "This pepperoni pizza is being eaten." 
 
 const obj = {
     name: 'Cat',
     greet(){
-        return `Hi, I'm ${this.name}.` // I just learned that in an object you can access a data property elsewhere inside the object by using the "this" keyword like I did on this line in my return statement.
+        return `Hi, I'm ${this.name}.` // I just learned that in an object you can use a data property elsewhere inside the object by using the "this" keyword like I did on this line in my return statement.
     }
 }
 obj.greet()// Hi, I'm Cat.

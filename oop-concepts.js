@@ -1,3 +1,5 @@
+/* This file is to follow along with https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming */
+
 /* 
 Usually when people refer to Object Oriented Programming(OOP), they are talking about
 class-based OOP. 3 main concepts of OOP are classes and instances, inheritance, and encapsulation.
