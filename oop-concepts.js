@@ -15,7 +15,7 @@ A question:
 What are the placeholders (for instance attributes and methods) in the class called?
 My answer:
 They're called "definitions", or more specifically "data definitions" or "method definitions".
-brilliant.org calls them, "initial values for state(member variables), and implementations of behavior(member functions/methods)."
+brilliant.org calls them, "initial values for state(member variables), and implementations of behavior(member functions/methods)." They can also be called "Class fields".
 
 Inheritance:
 "super classes" or in other words "parent classes" create "child classes" or in other words "subclasses" through their called constructors. 
