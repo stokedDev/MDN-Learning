@@ -34,8 +34,8 @@ If within a class a definition is made private, it is not accessible from outsid
 Heres JS code to give an example of encapsulation, # is a keyword to make a class field private:
 */
 class Persont{ /* I put a "t" at the end because the there is a conflicting class name in another file in this directory. */
-#gender; /* We need to declare this private class data field here to make it usable yet not accessible from the outside if it's used in a method that we call but it can't be accessed directly from the outside of the class 
-as in mally.#gender  */
+#gender; /* We need to declare this private class data field here to make it usable ( but still not directly accessible from the outside as in mally.#gender) if it's used in a public method(from inside the Persont class).
+*/
     constructor(name,gender,mood,location){
         this.#gender = gender; // private class field that can't be accessed directly from the outside
         this.mood = mood;
