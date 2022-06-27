@@ -2,7 +2,7 @@
 
 /* 
 Usually when people refer to Object Oriented Programming(OOP), they are talking about
-class-based OOP. 3 main concepts of OOP are classes and instances, inheritance, and encapsulation.
+class-based or "classical" OOP. 3 main concepts of OOP are classes and instances, inheritance, and encapsulation.
 
 Classes and Instances:
 In OOP, objects(or instances) are created by calling
