@@ -55,3 +55,29 @@ grotus.attack()// Grotus is dark-purple and is attacking.
 grotus.color = 'dark-red' // On this line the Monster instance grotus gets it's color data property changed to dark-red
 grotus.attack() // returns Grotus is dark-red and is attacking.
 grotus.think() // returns Grotus is thinking.
+
+/* Encapsulation */
+/* Encapsulation means that a class is enclosed in a certain way. Classes can vary in how they are encapsulated with some having less or more private or public fields. */
+/* A hash sign (#) placed before a class field makes such class field a private class field only accessible inside it's class, this encapsulation is enforced by JavaScript itself. Class fields are public by default. */
+
+class Car{
+    #serialNumber; /* We need to declare this private class data field here to make it usable ( but still not directly accessible from the outside as in jeep.#serialNumber) if it's used in a public method(from inside the Car class) as in driveSpeed().
+      */
+    constructor(serialNumber,color,brand,kind,speed){/* With this constructor, spaces are made for properties to be filled in when the constructor is called, getting access to all the public class methods and state when a new instance object is created. */
+        this.#serialNumber = serialNumber;
+        this.color = color;
+        this.brand = brand;
+        this.kind = kind;
+        this.speed = speed;
+    }
+    #drive(){ /* because of the hash sign this is now a private method only accessible to the Car class itself yet since #drive() is called in the public method driveSpeed(), it's return result is included in driveSpeed()'s return statement when it's called as in jeep.driveSpeed() */
+        return `A ${this.brand} ${this.kind} with a serial number of ${this.#serialNumber} is driving.`
+    }
+    driveSpeed(){ // see comment for #drive() and comment for #serialNumber; which both touch on this method.
+        return `${this.#drive()} It is going ${this.speed}.`
+    }
+}
+
+const jeep = new Car('99F', 'red', 'Ford', 'Spark', '45mph') /* a Car instance of jeep is created with it's parameters filled in with arguments */
+
+jeep.driveSpeed() // returns A Ford Spark with a serial number of 99F is driving. It is going 45mph.
