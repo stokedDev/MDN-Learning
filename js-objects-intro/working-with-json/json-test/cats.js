@@ -13,7 +13,6 @@ fetch(requestURL)
 function displayCatInfo(catString) {
   let total = 0;
   let male = 0;
-
 // Add your code here
 const cS = JSON.parse(catString)
 console.log(cS)
@@ -21,10 +20,15 @@ console.log(cS[0].kittens)
 for(let i = 0; i < cS.length; i++){
     for(const kitten of cS[i].kittens){
         total++
-        male += (kitten.gender == 'm'? 1: 0)
+        if(kitten.gender == 'm') male++;
+    }
+    if(i < cS.length - 1){
+      motherInfo += `${cS[i].name}, `
+    } else {
+      motherInfo += `and ${cS[i].name}.`
     }
 }
-motherInfo += `${cS[0].name}, ${cS[1].name}, and ${cS[2].name}.`
+
 kittenInfo = `There's a total of ${total} kittens. There's ${male} male kittens and ${total - male} female kittens.`
 // Don't edit the code below here!
 
