@@ -15,7 +15,8 @@
 const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
-Promise.all([fetchPromise1, fetchPromise2])
+Promise.all([fetchPromise1, fetchPromise2]) /* Promise.all() takes an array of promises and returns a fulfilled promise
+                                               if all promises in the array are fulfilled and rejected if any are rejected */
 .then(responses => {
  return responses.map(el => el.json());
 })
