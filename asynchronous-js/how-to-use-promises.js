@@ -12,14 +12,23 @@
 
 // /* Combining Multiple Promises */
 
+// const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+// const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+// Promise.all([fetchPromise1, fetchPromise2]) /* Promise.all() takes an array of promises and returns a fulfilled promise
+//                                      if all promises in it's array are fulfilled. It returns a rejected promise if any are rejected. */
+// .then(responses => {
+//  return responses.map(el => el.json());
+// })
+// .then(data => console.log([...data]))
+// .catch(error => console.error(`Here's the error: ${error}`))
+// .finally(setTimeout(() => console.log('This runs no matter what.'),500))
+
 const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
-
-Promise.all([fetchPromise1, fetchPromise2]) /* Promise.all() takes an array of promises and returns a fulfilled promise
-                                               if all promises in the array are fulfilled and rejected if any are rejected */
-.then(responses => {
- return responses.map(el => el.json());
-})
-.then(data => console.log([...data]))
+Promise.any([fetchPromise1, fetchPromise2]) /* Promise.any() will return a fulfilled promise if any of the promises passed to it are fulfilled. It returns a rejected promise only if all the promises in it's passed array are rejected. */
+.then(response => response.json())
+.then(data => console.log(data))
 .catch(error => console.error(`Here's the error: ${error}`))
-.finally(setTimeout(() => console.log('This runs no matter what.'),500))
+.finally(setTimeout(() => 
+console.log('I am logged when the promise is settled, whether fulfilled or rejected.'),500)); /* The .finally() handler is called when the promise is settled, whether fulfilled or rejected. */
