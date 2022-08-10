@@ -63,10 +63,3 @@ async function fetchSuperheroes(){
 }
 const promise2 = fetchSuperheroes()
 promise2.then(data => console.log(data))
-
-
-
-
-
-
-
