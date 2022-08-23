@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Worker Example</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h5>Watch JavaScript Count Live!</h5>
+        <input type="number" placeholder="Enter number to count to." class="num" step="1000" min="100" max="100000000">
+        <button class="count-btn">count to your number</button>
+        <div class="current-count">0 counted
+        </div>
+        <textarea placeholder="Even if you make this app count up to 100 million using the input above, you can type here because my dedicated web worker thread does the counting instead of the main thread doing it, which allows the UI to always remain uninterupted by the counting." cols="30" rows="7" class="comment" maxLength="250"></textarea>
+    </div>
+</body>
+</html>
